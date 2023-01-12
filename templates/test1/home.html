@@ -1,0 +1,62 @@
+{% extends 'test1/_base.html' %}
+{% load static %}
+{% block content %}
+    <section class="u-clearfix u-palette-1-dark-1 u-section-1" id="sec-9b4f">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-size-12 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h4 class="u-text u-text-default u-text-1">Signup with:</h4>
+                    <a href="{% url 'social:begin' 'google-oauth2' %}">
+                        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="{% static 'images/300221.png' %}" alt="" data-image-width="128" data-image-height="128">
+                    </a>
+                    <a href="{% url 'social:begin' 'linkedin-oauth2' %}">
+                        <img class="u-image u-image-default u-preserve-proportions u-image-2" src="{% static 'images/145807.png' %}" alt="" data-image-width="128" data-image-height="128">
+                    </a>
+                  <img class="u-image u-image-default u-preserve-proportions u-image-3" src="{% static 'images/5968764.png' %}" alt="" data-image-width="128" data-image-height="128">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-10 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h4 class="u-text u-text-2">OR</h4>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-38 u-layout-cell-3">
+                <div class="u-container-layout u-container-layout-3">
+                  <div class="u-form u-form-1">
+                    <form action="#" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+                        {% csrf_token %}
+                      <div class="u-form-group u-form-name">
+                        <label for="name-5356" class="u-label">Username</label>
+                        <input type="text" placeholder="Enter username" id="name-5356" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                      </div>
+                      <div class="u-form-email u-form-group">
+                        <label for="email-5356" class="u-label">Email</label>
+                        <input type="email" placeholder="Enter a valid email address" id="email-5356" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                      </div>
+                      <div class="u-form-group u-form-group-3">
+                        <label for="text-5b38" class="u-label">Password</label>
+                        <input type="password" placeholder="Enter Password" id="text-5b38" name="pass1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+                      </div>
+                      <div class="u-form-group u-form-group-4">
+                        <label for="text-8606" class="u-label">Password</label>
+                        <input type="password" placeholder="Re-enter Password " id="text-8606" name="pass2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+                      </div>
+                      <div class="u-align-left u-form-group u-form-submit">
+                          <button type="submit" class="u-btn u-btn-submit u-button-style">Signup</button>
+                      </div>
+                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                      <input type="hidden" value="" name="recaptchaResponse">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
